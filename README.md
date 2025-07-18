@@ -20,7 +20,7 @@ This project deploys a 3-Tier architecture on AWS using Terraform Modules and op
 
 ---
 
-## 🛠️ Deployment Steps
+##  Deployment Steps
 
 ```bash
 # Clone the repo
@@ -35,3 +35,18 @@ terraform validate
 
 # Apply the configuration
 terraform apply -auto-approve
+
+How the System Works
+VPC Module: Creates VPC, subnets, IGW, route tables.
+
+EC2 Module: Launches Web and App EC2 instances into appropriate subnets.
+
+RDS Module: Creates a private MySQL RDS instance.
+
+User Flow:
+
+User accesses submit.html on the Web EC2 instance.
+
+Form sends POST request to App EC2's private IP.
+
+PHP script in App EC2 saves data to RDS
