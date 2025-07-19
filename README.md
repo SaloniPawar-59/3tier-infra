@@ -15,7 +15,6 @@ This project deploys a 3-Tier architecture on AWS using Terraform Modules and op
 - AWS account with CLI configured
 - IAM role with necessary permissions (EC2, RDS, VPC, S3, etc.)
 - Terraform v1.4+ installed
-- (Optional) Ansible installed for provisioning
 - Key Pair for SSH access to instances
 
 ---
